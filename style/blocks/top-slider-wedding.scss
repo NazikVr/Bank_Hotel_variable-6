@@ -1,0 +1,85 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+
+  &__item {
+    position: relative;
+    text-align: center;
+  }
+
+  &__item img { 
+    position: relative;
+    width: 100%;
+    height: 665px;
+  }
+}
+
+.slick {
+  &-track {
+    display: flex;
+  }
+
+  &-arrow {
+    position: absolute;
+    top: 40%;
+    border: none;
+    z-index: 99;
+    font-size: 0;
+    width: 18px;
+    height: 30px;
+  }
+  
+  &-prev {
+    left: 10%;
+    background: url("../image/arrow-left.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-next {
+    background: url("../image/arrow-right.png");
+    right: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &-dots {
+    z-index: 99;
+    position: relative;
+    top: -70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-dots li {
+    list-style: none;
+    margin: 0 10px;
+  }
+  
+  &-dots button {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgba(90, 90, 90, 0.3);
+    border: none;
+
+    @include onTablet{
+      height: 20px;
+      width: 20px;
+    }
+
+    @include onDesktop {
+      height: 25px;
+      width: 25px;
+    }
+  }
+
+  &-dots li.slick-active button {
+    background-color: rgba(150, 150, 150, 0.9);
+  }
+}
+
